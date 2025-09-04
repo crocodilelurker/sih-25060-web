@@ -8,6 +8,6 @@ app.use(express.json());
 
 app.use('/api/rag',ragRoute)
 
-app.listen(8000,()=>{
+app.listen(8000,()=>{//didnt add this port thing in .env 
     console.log("Server Running on Port 8000")
 })

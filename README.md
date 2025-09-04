@@ -1,1 +1,1 @@
-Backend and Frontend for web-app
+Frontend for web-app

@@ -13,3 +13,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.font-salsa {
+  font-family: 'Salsa', cursive;
+}
+
+.join-button {
+  background-color: #fff;
+  color: #10b981;
+  border: 2px solid #10b981;
+  padding: 1rem 2rem;
+  font-size: 100%;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #10b981;
+  color: #fff;
+}

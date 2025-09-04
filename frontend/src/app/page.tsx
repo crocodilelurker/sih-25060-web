@@ -1,10 +1,12 @@
 import SampleComponent from "@/app/_components/SampleComponent";
+import Hero from "@/app/_components/Hero";
 
 export default function Home() 
 {
   return (
     <div>
       Home Page
+      <Hero/>
       <SampleComponent/>
     </div>
   )

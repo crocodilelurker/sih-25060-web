@@ -3,8 +3,8 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import GetButton from './get-button';
-import { SlideRight } from '../utility/animation';
-import { amita, montserrat, salsa } from '../utility/font';
+import { SlideRight } from '../_utility/animation';
+import { amita, montserrat, salsa } from '../_utility/font';
 
 // Define types
 type ImageType = string;

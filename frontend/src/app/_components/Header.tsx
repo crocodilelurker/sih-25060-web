@@ -28,7 +28,7 @@ const Header: React.FC = () => {
                 {/* Desktop Nav Links */}
                 {[
                     { name: 'Home', path: '/' },
-                    { name: 'Public', path: '/public' },
+                    { name: 'General', path: '/general' },
                     { name: 'Task', path: '/task' },
                     { name: 'Community', path: '/community' },
                     { name: 'Green Heroes', path: '/green-heroes' },

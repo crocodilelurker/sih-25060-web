@@ -17,34 +17,10 @@ const Header: React.FC = () => {
                         className="object-contain"
                     />
                     <span
-                        className="
-      relative
-      text-green-600 
-      font-semibold 
-      text-2xl
-      select-none 
-      cursor-pointer
-      transition-all
-      duration-500
-      ease-in-out
-      hover:animate-glow-float
-    "
-                    >
+                        className="relative text-green-600 text-2xl">
+                    
                         Swach Setu
-                        <span
-                            className="
-        absolute 
-        bottom-0 
-        left-0 
-        w-full 
-        h-[2px] 
-        bg-gradient-to-r from-green-400 via-green-600 to-green-400
-        rounded
-        opacity-0
-        hover:opacity-100
-        transition-opacity
-        duration-500
-      "
+                        <span 
                         ></span>
                     </span>
                 </Link>

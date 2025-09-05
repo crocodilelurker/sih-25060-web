@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-emerald-900 text-white dark:bg-emerald-950">
       <div className="w-screen ">
         <Link href="/" className="flex items-center gap-4">
                     <Image

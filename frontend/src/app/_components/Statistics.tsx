@@ -1,21 +1,26 @@
 "use client"
 import React from "react";
 import { motion } from "framer-motion";
+import { Saira } from "next/font/google";
 
+const saira =Saira ({
+  subsets:["latin"],
+  weight:["600"]
+})
 const Statistics: React.FC = () => {
   return (
     <div className="mt-10 max-w-4xl mx-auto px-5 mb-5">
       {/* Header */}
       <motion.div
         className="text-center mb-8"
-        initial={{ opacity: 0, y: -30 }}
+        initial={{ opacity: 0, y: -30}}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h1 className="text-5xl font-bold text-black mb-3">
+        <h1 className={`text-5xl  mb-3 text-emerald-500 ${saira.className}`}>
           Waste Management Statistics
         </h1>
-        <p className="text-gray-600">
+        <p className=" text-gray-600 text-lg font-semibold">
           Track progress in waste segregation and management.
         </p>
       </motion.div>

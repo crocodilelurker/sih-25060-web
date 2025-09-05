@@ -1,6 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Saira } from 'next/font/google';
+
+const saira = Saira({
+    subsets:["latin"],
+    weight: ["600"]
+})// font for Swach setu
+
 const Header: React.FC = () => {
     return (
         <nav className="bg-white p-4 border-b border-gray-200 flex items-center justify-between relative shadow-sm">
@@ -17,7 +24,7 @@ const Header: React.FC = () => {
                         className="object-contain"
                     />
                     <span
-                        className="relative text-green-600 text-2xl">
+                        className={`relative text-green-600 text-2xl ${saira.className}`}>
                     
                         Swach Setu
                         <span 

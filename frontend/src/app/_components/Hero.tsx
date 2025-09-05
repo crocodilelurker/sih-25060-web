@@ -4,7 +4,8 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import GetButton from './get-button';
 import { SlideRight } from '../_utility/animation';
-import { amita, montserrat, salsa } from '../_utility/font';
+import { amita, salsa } from '../_utility/font';
+import Link from 'next/link';
 
 // Define types
 type ImageType = string;
@@ -13,13 +14,13 @@ const Hero = () => {
   const images: ImageType[] = ['/image1.png', '/image2.png', '/image3.png']; // replace with your images
   const [current, setCurrent] = useState<number>(0);
 
-  const nextSlide = (): void => {
-    setCurrent((prev) => (prev + 1) % images.length);
-  };
+  // const nextSlide = (): void => {
+  //   setCurrent((prev) => (prev + 1) % images.length);
+  // };
 
-  const prevSlide = (): void => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length);
-  };
+  // const prevSlide = (): void => {
+  //   setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  // };
 
   return (
     <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 min-h-[650px] gap-8 text-center">
@@ -66,10 +67,14 @@ const Hero = () => {
           transition={{ duration: 1.8, delay: 1.7 }}
           className="flex gap-4 justify-center space-x-4"
         >
-          <button className="px-6 py-2 border border-gray-300 rounded transition join-button">
-            Join
-          </button>
-          <GetButton text="Get Started" />
+          <Link href="/about">
+            <button className="px-6 py-1 border border-gray-300 rounded-3xl transition join-button">
+              Explore
+            </button>
+          </Link>
+          <Link href="/auth">
+            <GetButton text="Get Started" />
+          </Link>          
         </motion.div>
 
         {/* Navigation links */}

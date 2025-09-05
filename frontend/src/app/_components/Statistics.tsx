@@ -7,12 +7,19 @@ const Statistics: React.FC = () => {
     <div className="mt-10 max-w-4xl mx-auto px-5 mb-5">
       {/* Header */}
       <motion.div
-        className="text-center mb-8"
+        className="text-center mb-8 group"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h1 className="text-5xl font-bold text-black mb-3">
+        <h1 className="text-5xl font-bold text-black mb-3 transition-all ease-in-out duration-500 
+                 group-hover:bg-gradient-to-r 
+                 group-hover:from-orange-500 
+                 group-hover:via-yellow-600 
+                 group-hover:to-green-500 
+                 group-hover:bg-clip-text 
+                 group-hover:text-transparent
+                 cursor-pointer">
           Waste Management Statistics
         </h1>
         <p className="text-gray-600">
@@ -24,7 +31,7 @@ const Statistics: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
         {/* Card 1 */}
         <motion.div
-          className="bg-white shadow-md rounded-2xl p-6 border border-amber-200"
+          className="bg-white shadow-md rounded-2xl p-6 border border-amber-200 cursor-pointer"
           initial={{ opacity: 0, y: 40}}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
@@ -41,7 +48,7 @@ const Statistics: React.FC = () => {
 
         {/* Card 2 */}
         <motion.div
-          className="bg-white shadow-md rounded-2xl p-6 border border-amber-200"
+          className="bg-white shadow-md rounded-2xl p-6 border border-amber-200 cursor-pointer"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}

@@ -7,6 +7,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html, body {
+  background-color: #f5f5f5;
+  min-height: 100%;
+}
 
 body {
   background: var(--background);
@@ -14,6 +18,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+<<<<<<< HEAD
+.font-salsa {
+  font-family: 'Salsa', cursive;
+}
+
+.join-button {
+  background-color: #fff;
+  color: #10b981;
+  border: 2px solid #10b981;
+  padding: 1rem 2rem;
+  font-size: 100%;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #10b981;
+  color: #fff;
+}
+=======
 @keyframes glow-float {
   0%, 100% {
     color: #16a34a; /* Tailwind green-600 */

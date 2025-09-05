@@ -1,4 +1,6 @@
-export const SlideRight = (delay) => {
+
+
+export const SlideRight = (delay: number) => {
   return {
     hidden: {
       opacity:0,
@@ -10,7 +12,7 @@ export const SlideRight = (delay) => {
       transition: {
         duration: 1,
         delay: delay,
-        ease:"easeOut"
+        ease:"easeOut" as const,
       }
     }
   }

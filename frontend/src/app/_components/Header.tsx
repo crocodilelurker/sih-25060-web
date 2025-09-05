@@ -89,7 +89,7 @@ const Header: React.FC = () => {
                     href="/auth"
                     className="px-4 py-2 bg-green-600 text-white font-medium rounded-md transition duration-300 hover:brightness-110 hover:shadow-md inline-block text-center"
                 >
-                    Sign up
+                    Sign Up 
                 </Link>
 
             </div>

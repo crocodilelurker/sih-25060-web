@@ -57,3 +57,28 @@ body {
 .hover\:animate-glow-float:hover {
   animation: glow-float 2.5s ease-in-out infinite;
 }
+@keyframes scrollForward {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+@keyframes scrollBackward {
+  0% {
+    transform: translateX(-33.3333%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.forward-scroll {
+  animation: scrollForward 90s linear infinite; /* Slowed down to 90s */
+}
+
+.backward-scroll {
+  animation: scrollBackward 75s linear infinite; /* Slowed down to 75s */
+}

@@ -1,1 +1,0 @@
-Model to determine ways for a certain waste

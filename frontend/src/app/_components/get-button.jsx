@@ -20,7 +20,7 @@ const GetButton = ({ text }) => {
       </svg>
 
       {/* Animated green background */}
-      <span className="absolute top-1/2 left-[-100%] w-full aspect-square bg-emerald-500 rounded-full -z-10 transition-all duration-700 ease-out group-hover:left-0 group-hover:scale-150"></span>
+      <span className="absolute inset-0 w-full h-full bg-emerald-500 rounded-full -z-10 translate-x-[-100%] scale-75 transition-all duration-700 ease-out group-hover:translate-x-0 group-hover:scale-125"></span>
     </button>
   );
 };

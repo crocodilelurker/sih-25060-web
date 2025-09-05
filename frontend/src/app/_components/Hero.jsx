@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import GetButton from "./get-button";
 import { SlideRight } from "../utility/animation";
+import { amita, montserrat, salsa } from "../utility/font";
 
 const Hero = () => {
   const images = ["/image1.png", "/image2.png", "/image3.png"]; // replace with your images
@@ -16,13 +17,13 @@ const Hero = () => {
   return (
     <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 min-h-[650px] gap-8 text-center">
       {/* Left Side */}
-      <div className="flex flex-col justify-center space-y-6 px-4 md:px-0">
-        <p className="text-8xl md:text-8xl text-green-600 text-center">
+      <div className="flex flex-col justify-center space-y-9 px-6 md:px-0 h-125 mr-10">
+        <div className="md:text-8xl text-green-600 text-center w-full min-h-[200] h-75 mt-30">
           <motion.span
             variants={SlideRight(0.7)}
             initial="hidden"
             animate="visible"
-            className="text-6xl"
+            className={`${amita.className} text-6xl`}
           >
             Welcome
           </motion.span>{" "}
@@ -30,25 +31,25 @@ const Hero = () => {
             variants={SlideRight(0.7)}
             initial="hidden"
             animate="visible"
-            className="text-6xl"
+            className={`${amita.className} text-6xl`}
           >
             to{" "}
           </motion.span>
           <br></br>
-          <motion.span
+          <motion.div
             variants={SlideRight(0.9)}
             initial="hidden"
             animate="visible"
-            className=" bg-gradient-to-r from-orange-500 via-yellow-600 to-green-500 bg-clip-text text-transparent font-semibold"
+            className={`${amita.className} my-6 text-9xl bg-gradient-to-r from-orange-500 via-yellow-600 to-green-500 bg-clip-text text-transparent mt-5 h-75 py-6 font-semibold`}
           >
-            Swach Setu
-          </motion.span>
-        </p>
+            स्वछ सेतु
+          </motion.div>
+        </div>
         <motion.p
           variants={SlideRight(1.1)}
           initial="hidden"
           animate="visible"
-          className="text-gray-500 text-2xl font-salsa "
+          className={`${salsa.className} text-gray-500 text-2xl`}
         >
           Learn to Control Waste Management
         </motion.p>

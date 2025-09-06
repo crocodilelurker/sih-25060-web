@@ -1,4 +1,3 @@
-// src/app/model_page/waste_management/page.tsx
 'use client';
 import { Jost } from 'next/font/google';
 import { useState } from 'react';
@@ -45,7 +44,7 @@ export default function WasteManagementPage() {
     } catch (err: any) {
       setError(err.message || 'An unexpected error occurred');
     } finally {
-      setLoading(false); // This will reset the button state
+      setLoading(false);
     }
   };
 

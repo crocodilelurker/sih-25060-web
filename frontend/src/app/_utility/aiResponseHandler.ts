@@ -1,4 +1,3 @@
-// src/app/_utility/aiResponseHandler.ts
 export const cleanAIResponse = (rawResponse: string): string => {
   let cleaned = rawResponse.replace(/#{1,3}\s+(.+?)\n/g, (match, p1) => {
     return `<p><strong>${p1}</strong></p>`;

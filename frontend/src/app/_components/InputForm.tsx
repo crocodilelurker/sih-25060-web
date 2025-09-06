@@ -1,4 +1,4 @@
-// src/app/_components/InputForm.tsx
+
 'use client';
 
 import { useState } from 'react';

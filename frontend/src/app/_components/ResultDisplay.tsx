@@ -1,4 +1,3 @@
-// src/app/_components/ResultDisplay.tsx
 'use client';
 
 import { motion } from 'framer-motion';

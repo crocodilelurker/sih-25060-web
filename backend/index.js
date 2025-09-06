@@ -1,9 +1,6 @@
-// index.js
 const express = require('express');
 const dotenv = require('dotenv');
 const ragRoute = require('./routes/ragRoute.js');
-
-// Debug: Check if cors is available
 try {
   const cors = require('cors');
   console.log('CORS module loaded successfully');
@@ -11,7 +8,7 @@ try {
   console.error('Failed to load CORS module:', error);
 }
 
-const cors = require('cors'); // This should work now after npm install
+const cors = require('cors'); 
 
 dotenv.config();
 

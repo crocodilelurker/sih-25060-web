@@ -80,3 +80,51 @@ body {
 .backward-scroll {
   animation: scrollBackward 75s linear infinite; /* Slowed down to 75s */
 }
+/*Model wala css */
+.btn-primary {
+  background: linear-gradient(to right, var(--color-emerald-500), var(--color-cyan-500));
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.text-green {
+  color: var(--color-emerald-700);
+}
+
+.text-blue {
+  color: var(--color-cyan-700);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--color-emerald-50), var(--color-cyan-50));
+}

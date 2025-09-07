@@ -195,7 +195,7 @@ const Blogs = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-40 px-4 text-center bg-gradient-to-r from-green-500 via-emerald-600 to-lime-400 text-white p-6 rounded-xl text-white"
+        className="py-40 px-4 text-center bg-gradient-to-r from-green-500 via-emerald-600 to-lime-400 p-6 rounded-xl text-white"
       >
         <h1 className="text-5xl lg:text-7xl leading-snug font-bold mb-5 text-white drop-shadow-lg">
           Welcome to Our Blog

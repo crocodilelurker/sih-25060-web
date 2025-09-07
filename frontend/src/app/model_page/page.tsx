@@ -13,6 +13,7 @@ export default function ModelPage()
             <Link href = "model_page/waste_management">
             <span> Waste Management Page</span>
             </Link>
+            //swagatsahu556
         </div>
     )
 }

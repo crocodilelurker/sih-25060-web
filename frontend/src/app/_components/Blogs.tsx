@@ -198,7 +198,7 @@ const Blogs = () => {
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
   const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
-const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
+  const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
 
   return (
     <div className="container mx-auto px-4 py-10 space-y-12 ">
@@ -232,7 +232,6 @@ const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
           onClick={() => {
               setSelectedCategory(cat);
               setCurrentPage(1);
-              window.scrollTo(0, 0);
             }}
             variant={selectedCategory === cat ? "default" : "outline"}className="rounded-full">
             {cat}

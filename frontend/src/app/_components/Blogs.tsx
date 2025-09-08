@@ -6,15 +6,20 @@ import { Button } from "@/app/_components/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const categories = [
-  "Health",
-  "Recycling",
-  "Sustainability",
-  "Innovation",
-  "Energy",
-  "Policy",
-  "Community",
-];
+import { Bebas_Neue } from "next/font/google";
+
+export const bebas = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+import { Merriweather } from "next/font/google";
+
+export const merriweather = Merriweather({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
 
 const blogs = [
   {
@@ -168,6 +173,9 @@ const blogs = [
   },
 ];
 
+const categories = ["All", ...Array.from(new Set(blogs.map((blog) => blog.category)))];
+
+
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
   visible: (i: number) => ({
@@ -179,13 +187,18 @@ const fadeUp = {
 
 const Blogs = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const blogsPerPage = 9;
+
+  const filteredBlogs =
+    selectedCategory === "All"
+      ? blogs
+      : blogs.filter((blog) => blog.category === selectedCategory);
 
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-  const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
-
-  const totalPages = Math.ceil(blogs.length / blogsPerPage);
+  const currentBlogs = filteredBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
+const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
 
   return (
     <div className="container mx-auto px-4 py-10 space-y-12 ">
@@ -197,10 +210,10 @@ const Blogs = () => {
         transition={{ duration: 0.8 }}
         className="py-40 px-4 text-center bg-gradient-to-r from-green-500 via-emerald-600 to-lime-400 p-6 rounded-xl text-white"
       >
-        <h1 className="text-5xl lg:text-7xl leading-snug font-bold mb-5 text-white drop-shadow-lg">
+        <h1 className={`${bebas.className} text-5xl lg:text-8xl leading-snug font-bold mb-5 text-white drop-shadow-lg`}>
           Welcome to Our Blog
         </h1>
-        <p className="text-gray-100 text-3xl">
+        <p className={`${merriweather.className} text-gray-100 text-3xl`}>
           Insights that turn awareness into action.
         </p>
       </motion.section>
@@ -214,7 +227,14 @@ const Blogs = () => {
         className="flex flex-wrap justify-center gap-3"
       >
         {categories.map((cat, i) => (
-          <Button key={i} variant="outline" className="rounded-full">
+          <Button 
+          key={i} 
+          onClick={() => {
+              setSelectedCategory(cat);
+              setCurrentPage(1);
+              window.scrollTo(0, 0);
+            }}
+            variant={selectedCategory === cat ? "default" : "outline"}className="rounded-full">
             {cat}
           </Button>
         ))}

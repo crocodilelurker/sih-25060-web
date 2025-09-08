@@ -1,29 +1,17 @@
-'use client';
+"use client";
 
-import { motion } from 'motion/react';
-import { useState } from 'react';
-import GetButton from './get-button';
-import { SlideRight } from '../_utility/animation';
-import { amita, salsa } from '../_utility/font';
-import Link from 'next/link';
-
-// Define types
-type ImageType = string;
+import { motion } from "motion/react";
+import GetButton from "./get-button";
+import { SlideRight } from "../_utility/animation";
+import { amita, salsa } from "../_utility/font";
+import Link from "next/link";
+import Carousel from "./carousel/Carousel";
+import { slidesData1 } from "./carousel/slidesData1";
+import { slidesData2 } from "./carousel/slidesData2";
 
 const Hero = () => {
-  const images: ImageType[] = ['/image1.png', '/image2.png', '/image3.png']; // replace with your images
-  const [current, setCurrent] = useState<number>(0);
-
-  // const nextSlide = (): void => {
-  //   setCurrent((prev) => (prev + 1) % images.length);
-  // };
-
-  // const prevSlide = (): void => {
-  //   setCurrent((prev) => (prev - 1 + images.length) % images.length);
-  // };
-
   return (
-    <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 min-h-[650px] gap-8 text-center">
+    <div className="flex flex-col md:flex-row container container mx-auto px-20 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
       {/* Left Side */}
       <div className="flex flex-col justify-center space-y-9 px-6 md:px-0 h-125 mr-10">
         <div className="md:text-8xl text-green-600 text-center w-full min-h-[200px] h-75 mt-30">
@@ -34,14 +22,14 @@ const Hero = () => {
             className={`${amita.className} text-6xl`}
           >
             Welcome
-          </motion.span>{' '}
+          </motion.span>{" "}
           <motion.span
             variants={SlideRight(0.7)}
             initial="hidden"
             animate="visible"
             className={`${amita.className} text-6xl`}
           >
-            to{' '}
+            to{" "}
           </motion.span>
           <br />
           <motion.div
@@ -74,54 +62,19 @@ const Hero = () => {
           </Link>
           <Link href="/auth">
             <GetButton text="Get Started" />
-          </Link>          
+          </Link>
         </motion.div>
-
-        {/* Navigation links */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.8, delay: 1.3 }}
-          className="flex gap-4 mt-4 justify-center space-x-4"
-        >
-          {(['Overview', 'Courses', 'Incentives', 'Support'] as const).map((link) => (
-            <button
-              key={link}
-              className="px-4 py-1 text-gray-600 hover:text-gray-800 transition shadow-md hover:shadow-lg rounded"
-            >
-              {link}
-            </button>
-          ))}
-        </motion.div> */}
       </div>
 
-      {/* Right Side - Carousel */}
-      {/* <div className="flex flex-col justify-center items-center bg-black p-4 rounded-lg relative">
-        <motion.img
-          key={images[current]}
-          src={images[current]}
-          alt="carousel"
-          className="w-[350px] md:w-[550px] xl:w-[700px]"
-          initial={{ opacity: 0, x: 200 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -200 }}
-          transition={{ type: 'spring', stiffness: 100, delay: 0.2 }}
-        />
-        <div className="flex gap-4 mt-4">
-          <button
-            onClick={prevSlide}
-            className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition"
-          >
-            Prev
-          </button>
-          <button
-            onClick={nextSlide}
-            className="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition"
-          >
-            Next
-          </button>
+      {/* Right Side - Carousels */}
+      <div className="flex flex-col justify-between md:w-[100%] h-[calc(100vh_-_8rem)]  gap-4">
+        <div className="mt-6 flex-1">
+          <Carousel slides={slidesData1} />
         </div>
-      </div> */}
+        <div className="flex-1">
+          <Carousel slides={slidesData2} reverse />
+        </div>
+      </div>
     </div>
   );
 };

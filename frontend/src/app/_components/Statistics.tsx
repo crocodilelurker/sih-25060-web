@@ -1,7 +1,12 @@
 "use client"
 import React from "react";
 import { motion } from "framer-motion";
+import { Saira } from "next/font/google";
 
+const saira =Saira ({
+  subsets:["latin"],
+  weight:["600"]
+})
 const Statistics: React.FC = () => {
   return (
     <div className="mt-10 max-w-4xl mx-auto px-5 mb-5">
@@ -20,9 +25,10 @@ const Statistics: React.FC = () => {
                  group-hover:bg-clip-text 
                  group-hover:text-transparent
                  cursor-pointer">
+
           Waste Management Statistics
         </h1>
-        <p className="text-gray-600">
+        <p className=" text-gray-600 text-lg font-semibold">
           Track progress in waste segregation and management.
         </p>
       </motion.div>

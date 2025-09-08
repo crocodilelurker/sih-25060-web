@@ -1,13 +1,33 @@
-const express = require('express')
-const dotenv = require('dotenv')
-const ragRoute = require('./routes/ragRoute.js')
+const express = require('express');
+const dotenv = require('dotenv');
+const ragRoute = require('./routes/ragRoute.js');
+try {
+  const cors = require('cors');
+  console.log('CORS module loaded successfully');
+} catch (error) {
+  console.error('Failed to load CORS module:', error);
+}
+
+const cors = require('cors'); 
+
 dotenv.config();
 
 const app = express();
+
+// Add CORS middleware
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
 
-app.use('/api/rag',ragRoute)
+app.use('/api/rag', ragRoute);
 
-app.listen(8000,()=>{//didnt add this port thing in .env 
-    console.log("Server Running on Port 8000")
-})
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, () => {
+  console.log(`Server Running on Port ${PORT}`);
+});

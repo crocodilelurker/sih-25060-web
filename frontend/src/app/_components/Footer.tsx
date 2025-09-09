@@ -5,12 +5,12 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="max-w-screen bg-emerald-900 text-white dark:bg-emerald-950">
-      <Link href="/" className="flex items-center gap-4"> <Image
+      <Link href="/" className="flex items-center gap-4 "> <Image
         src="/logo.png"
         alt="Logo"
         width={50}
         height={39}
-        className="mx-4 mt-4 rounded-full object-right-top "
+        className="mx-4 mt-4 rounded-full object-right-top object-contain bg-emerald-900 "
       />
       </Link>
       <div className="grid grid-cols-2 gap-8 px-4 pb-6 pt-2 lg:pb-8 lg:pt-2 md:grid-cols-4">

@@ -11,7 +11,7 @@ import { slidesData2 } from "./carousel/slidesData2";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row container container mx-auto px-20 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+    <div className="flex flex-col md:flex-row container mx-auto px-20 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
       {/* Left Side */}
       <div className="flex flex-col justify-center space-y-9 px-6 md:px-0 h-125 mr-10">
         <div className="md:text-8xl text-green-600 text-center w-full min-h-[200px] h-75 mt-30">

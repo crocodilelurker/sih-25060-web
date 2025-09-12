@@ -9,6 +9,15 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { motion } from "framer-motion"
 
+import { Progress } from "./progress"
+
+import { Saira } from "next/font/google"
+
+const saira = Saira ({
+  subsets: ["latin"],
+  weight: ["700"]
+})
+
 const data = [
   {
     index: 1,
@@ -89,10 +98,10 @@ const GreenHero = () => {
   const uniqueTypes = [...new Set(data.map((item) => item.type))]
 
   return (
-    <div className="flex gap-6 p-6">
+    <div className="flex gap-6 pt-6 pl-6 ml-8">
       {/* Left section */}
       <div className="flex-1">
-        <h1 className="font-bold text-5xl lg:text-6xl bg-gradient-to-r from-orange-500 via-green-700 to-green-900 bg-clip-text text-transparent ">
+        <h1 className={`${saira.className} font-bold text-5xl lg:text-6xl bg-green-900 bg-clip-text text-transparent pb-1`}>
           BHAGALPUR
         </h1>
 
@@ -174,6 +183,9 @@ const GreenHero = () => {
           <span className="text-lg text-gray-700"> /10</span>
         </h1>
         <p className="text-sm text-green-500 font-medium"> 📈 +0.4 from last week</p>
+
+        <Progress value={72} className="h-2 my-3" />
+
 
         <hr className="my-3 border-gray-200" />
 

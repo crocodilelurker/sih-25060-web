@@ -30,7 +30,7 @@ const blogs = [
       "Learn why separating wet and dry waste is the first step to effective recycling.",
     author: "Aditi Sharma",
     date: "Sep 1, 2025",
-    image: "",
+    image: "/waste-separation.jpg",
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const blogs = [
       "Turn your kitchen scraps into rich compost instead of sending them to landfills.",
     author: "Rohan Patel",
     date: "Aug 28, 2025",
-    image: "",
+    image: "/compost.jpg",
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const blogs = [
       "Understand the long-term damage caused by single-use plastics and alternatives.",
     author: "Meera Nair",
     date: "Aug 20, 2025",
-    image: "",
+    image: "/plastic-waste.jpg",
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const blogs = [
       "From old phones to laptops, learn the safe way to dispose of electronic waste.",
     author: "Arjun Mehta",
     date: "Aug 12, 2025",
-    image: "",
+    image: "/ewaste.jpg",
   },
   {
     id: 5,
@@ -70,7 +70,7 @@ const blogs = [
       "Simple activities and programs schools can run to teach kids waste management.",
     author: "Priya Verma",
     date: "Aug 5, 2025",
-    image: "",
+    image: "/classroom.jpg",
   },
   {
     id: 6,
@@ -80,7 +80,7 @@ const blogs = [
       "Turn waste into value with these simple and eco-friendly DIY projects.",
     author: "Karan Singh",
     date: "Jul 28, 2025",
-    image: "",
+    image: "/water-bottle.jpg",
   },
   {
     id: 7,
@@ -90,7 +90,7 @@ const blogs = [
       "How local governments can lead effective waste management initiatives.",
     author: "Ananya Gupta",
     date: "Jul 19, 2025",
-    image: "",
+    image: "/municipality.jpg",
   },
   {
     id: 8,
@@ -100,7 +100,7 @@ const blogs = [
       "Explore practical tips for adopting a zero-waste lifestyle at home.",
     author: "Vikram Rao",
     date: "Jul 11, 2025",
-    image: "",
+    image: "/low-waste.jpg",
   },
   {
     id: 9,
@@ -110,7 +110,7 @@ const blogs = [
       "A closer look at how landfills affect soil, water, and air quality.",
     author: "Sanya Kapoor",
     date: "Jul 2, 2025",
-    image: "",
+    image: "/landfill.jpg",
   },
   {
     id: 10,
@@ -119,7 +119,7 @@ const blogs = [
     excerpt: "Debunking common misconceptions around recycling processes.",
     author: "Rahul Jain",
     date: "Jun 25, 2025",
-    image: "",
+    image: "/recycling.jpg",
   },
   {
     id: 11,
@@ -129,7 +129,7 @@ const blogs = [
       "Why moving from a linear to circular economy is the future of sustainability.",
     author: "Sneha Iyer",
     date: "Jun 15, 2025",
-    image: "",
+    image: "/circular-economy.jpg",
   },
   {
     id: 12,
@@ -139,7 +139,7 @@ const blogs = [
       "Practical solutions for eateries to cut down food waste and save money.",
     author: "Aarav Khanna",
     date: "Jun 7, 2025",
-    image: "",
+    image: "/restaurant-food.jpg",
   },
   {
     id: 13,
@@ -149,7 +149,7 @@ const blogs = [
       "From bags to cutlery, explore eco-friendly alternatives to plastic.",
     author: "Nisha Menon",
     date: "May 29, 2025",
-    image: "",
+    image: "/biodegradable.jpg",
   },
   {
     id: 14,
@@ -159,7 +159,7 @@ const blogs = [
       "How local clean-up events bring people together for a greener world.",
     author: "Manish Yadav",
     date: "May 20, 2025",
-    image: "",
+    image: "/community.jpg",
   },
   {
     id: 15,
@@ -169,7 +169,7 @@ const blogs = [
       "Exploring how AI and IoT are transforming waste collection and sorting.",
     author: "Divya Pillai",
     date: "May 10, 2025",
-    image: "",
+    image: "/waste-bin.jpg",
   },
 ];
 

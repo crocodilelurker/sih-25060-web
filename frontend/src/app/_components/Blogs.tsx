@@ -203,19 +203,17 @@ const Blogs = () => {
   return (
     <div className="container mx-auto px-4 py-10 space-y-12 ">
       {/* Section 1: Welcome */}
-      <motion.section
+     <motion.section
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-40 px-4 text-center bg-gradient-to-r from-green-500 via-emerald-600 to-lime-400 p-6 rounded-xl text-white"
+        className="text-center w-full  bg-gradient-to-r  rounded-xl text-white"
       >
-        <h1 className={`${bebas.className} text-5xl lg:text-8xl leading-snug font-bold mb-5 text-white drop-shadow-lg`}>
-          Welcome to Our Blog
-        </h1>
-        <p className={`${merriweather.className} text-gray-100 text-3xl`}>
-          Insights that turn awareness into action.
-        </p>
+          <div className={`${bebas.className} w-fit px-2  rounded-xl mx-auto     leading-snug font-bold mb-5 text-black drop-shadow-2xl`}>
+              <p className="text-4xl lg:text-6xl">   Welcome to Our Blog!</p>
+              <p className=" text-sm lg:text-2xl">  Insights that turn awareness into action.</p>
+          </div>
       </motion.section>
 
       {/* Section 2: Categories */}

@@ -253,7 +253,7 @@ const Blogs = () => {
             transition={{ delay: i * 0.1, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Card className="shadow-md rounded-2xl hover:shadow-lg transition overflow-hidden">
+            <Card className="shadow-md rounded-2xl p-0 hover:shadow-lg transition overflow-hidden">
               {blog.image ? (
                 <Image
                   src={blog.image}
